@@ -1,13 +1,14 @@
 __author__ = 'benjamin_sanchez'
 
+
 def main():
-    aCount = 2 #int(input())
-    for x in range(aCount):
-        bLine =  [0, 0, 1, 1]  #[int(x) for x in input().split()]
-        xShift = abs(bLine[2] - bLine[0])
-        yShift = abs(bLine[1] - bLine[3])
-        xVal = int(yShift / xShift)
-        yVal = int(xVal - 0)
-        print("(" + str(xVal) + " " + str(yVal) + ")", end = " ")
+    counter = int(input())
+    for x in range(counter):
+        value = [int(x) for x in input().split()]
+        x_shift = (value[2] - value[0])
+        y_shift = (value[3] - value[1])
+        x_val = int(y_shift / x_shift)
+        y_val = -int(x_val * value[0] - value[1])
+        print("(" + str(x_val) + " " + str(y_val) + ")", end=" ")
 
 main()
